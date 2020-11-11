@@ -17,10 +17,17 @@ console.log("Hai detto di avere: " + anni);
 var prezzoPerChilometro = 0.21;
 var somma = chilometri * prezzoPerChilometro + "€";
 console.log(somma);
+// va applicato uno sconto del 20% per i minorenni;
+var minorenne = 17;
+var sommaMinore = chilometri * prezzoPerChilometro / 100 * 80 + "€";
+// va applicato uno sconto del 40% per gli over 65.
+var vecchio = 65;
+var sommaVecchio = chilometri * prezzoPerChilometro / 100 * 60 + "€";
 
-// if(anni < 18) {
-//   var somma = chilometri * prezzoPerChilometro - 20%;
-// }
-// else(anni < 65) {
-//   var somma = chilometri * prezzoPerChilometro - 45%;
-// }
+
+if(anni < minorenne) {
+  console.log(sommaMinore);
+}
+else if(anni > vecchio) {
+  console.log(sommaVecchio);
+}
