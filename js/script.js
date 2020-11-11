@@ -27,7 +27,9 @@ var sommaVecchio = chilometri * prezzoPerChilometro / 100 * 60 + "€";
 
 if(anni < minorenne) {
   console.log(sommaMinore);
+  document.getElementById('totale').innerHTML = "Per te è riservato lo sconto Minori";
 }
 else if(anni > vecchio) {
   console.log(sommaVecchio);
+  document.getElementById('totale').innerHTML = "Sei vecchio, stai a casa";
 }
